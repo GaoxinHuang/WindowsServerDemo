@@ -24,8 +24,7 @@ namespace WindowsServiceDemo
 
         protected override void OnStart(string[] args)
         {
-            //System.IO.File.Create(Environment.CurrentDirectory+"onStart.txt");
-            System.IO.File.Create(AppDomain.CurrentDomain.BaseDirectory + "onStart.txt");
+           FileWatcher f=new FileWatcher();
         }
 
         protected override void OnStop()
