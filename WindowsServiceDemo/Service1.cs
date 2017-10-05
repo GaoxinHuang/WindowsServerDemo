@@ -17,8 +17,15 @@ namespace WindowsServiceDemo
             InitializeComponent();
         }
 
+        public void OnDebug()
+        {
+            OnStart(null);
+        }
+
         protected override void OnStart(string[] args)
         {
+            //System.IO.File.Create(Environment.CurrentDirectory+"onStart.txt");
+            System.IO.File.Create(AppDomain.CurrentDomain.BaseDirectory + "onStart.txt");
         }
 
         protected override void OnStop()
